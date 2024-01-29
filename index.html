@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Stack プログラミング言語</title>
+        <!-- Bootstrap CSS -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    </head>
+
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <a class="navbar-brand" href="#">Stack プログラミング言語</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">ホーム<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">機能</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#example">サンプル</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contribute">貢献</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#license">ライセンス</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#community">コミュニティ</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+        <!-- Jumbotron -->
+        <div class="jumbotron">
+            <h1 class="display-4">Stack プログラミング言語</h1>
+            <p class="lead">スタック指向型の強力なスクリプト言語
+            </p>
+            <hr class="my-4">
+            <a class="btn btn-primary btn-lg" href="https://github.com/KajizukaTaichi/Stack-Programing-Language/"
+                role="button">
+                Github リポジトリ
+            </a>
+            <a class="btn btn-primary btn-lg" href="https://qiita.com/KajizukaTaichi/items/1c3e3ee08d102bfd576c"
+                role="button">
+                Qiita 記事
+            </a>
+        </div>
+        
+        <!-- Features -->
+        <div id="features">
+            <h2>機能</h2>
+            <ul class="feature-list">
+                <li>スタック指向型の効率的な実行モデル</li>
+                <li>明瞭で分かりやすいエレガントな構文</li>
+                <li>便利で拡張性の高い豊富なコマンド</li>
+                <li>強力かつ柔軟なデータ型の仕組み</li>
+            </ul>
+        </div>
+        <div id="example">
+            <h2>サンプルコード</h2>
+            <p>これはStackプログラミング言語でFizzBuzz問題を解くサンプルコードです</p>
+            <pre>
+(
+    (i) var 
+    (Fizz) () 
+    i 3 mod 0 equal if
+) (fizz) var
+
+(
+    (i) var 
+    (Buzz) () 
+    i 5 mod 0 equal if
+) (buzz) var
+
+1 101 1 range (i) (
+
+    () (msg) var
+    msg i fizz eval concat (msg) var
+    msg i buzz eval concat (msg) var
+
+    (
+        i (msg) var
+    ) ()
+    msg () equal if
+    msg print
+) for
+            </pre>
+        </div>
+        
+        <!-- Contribute -->
+        <div id="contribute">
+            <h2>貢献</h2>
+            <p>
+                どんな貢献も大歓迎です! 気軽にプルリクエストを開いてStackプログラミング言語をより良い物にしましょう。
+            </p>
+        </div>
+        
+        <!-- License -->
+        <div id="license">
+            <h2>ライセンス</h2>
+            <p>
+                Stackプログラミング言語はMITライセンスに基づく自由ソフトウェアです。誰もが利用や変更が出来ます。
+                詳細については<a href="https://github.com/KajizukaTaichi/Stack-Programing-Language/blob/main/LICENSE">LICENSE</a> ファイルをご覧ください
+            </p>
+        </div>
+
+        <!-- Community -->
+        <div id="community">
+            <h2>コミュニティ</h2>
+            <p>
+               Stackプログラミング言語はコミュニティで開発を進められています。
+               あなたも<a href="https://github.com/Stack-Programing-Community">コミュニティ</a>に参加してみませんか？             
+            </p>
+        </div>
+        
+        <!-- Bootstrap JS and dependencies -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  
+        <script>            
+            document.addEventListener("DOMContentLoaded", function () {
+                var navbar = document.querySelector('.navbar');
+                var jumbotron = document.querySelector('.jumbotron');
+
+                navbar.style.transition = "transform 0.5s";
+                navbar.style.transform = "translateY(-100%)";
+
+                var jumbotronVisible = false;
+
+                function checkJumbotronVisibility() {
+                    var jumbotronRect = jumbotron.getBoundingClientRect();
+                    jumbotronVisible = (
+                        jumbotronRect.top >= -150 &&
+                        jumbotronRect.left >= -150 &&
+                        jumbotronRect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                        jumbotronRect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                    );
+                }
+
+                function toggleNavbar() {
+                    if (!jumbotronVisible) {
+                        navbar.style.transform = "translateY(0%)";
+                    } else {
+                        navbar.style.transform = "translateY(-100%)";
+                    }
+                }
+
+                window.addEventListener('scroll', function () {
+                    checkJumbotronVisibility();
+                    toggleNavbar();
+                });
+
+                checkJumbotronVisibility();
+                toggleNavbar();
+            });
+        </script>
+
+
+        <style>
+            body {
+                padding: 20px;
+            }
+
+            h2 {
+                font-weight: 420;
+            }
+
+            .display-4 {
+                font-weight: 500;
+            }
+
+            p,
+            li,
+            a,
+            .lead {
+                font-weight: 350;
+                font-size: x-large;
+            }
+
+            nav {
+                margin-bottom: 30px;
+                font-weight: 20;
+            }
+
+            .btn {
+                margin: 5px;
+                background-color: lightslategray;
+                border-color: lightslategray;
+            }
+
+            pre {
+                background-color: gainsboro;
+                color: black;
+                border-radius: 5px;
+                padding: 10px;
+            }
+
+            .jumbotron {
+                background-color: #343a40;
+                color: #ffffff;
+                padding: 30px;
+            }
+
+            .feature-list {
+                list-style-type: decimal;
+                padding: 5;
+            }
+
+            .my-4 {
+                background-color: lightgray;
+            }
+
+            .feature-list li {
+                padding: 8px 0;
+            }
+
+            h2 {
+                padding: 10px 0;
+                font-size: xx-large;
+                border-bottom-color: #343a40;
+                border-bottom-width: 2px;
+                border-bottom-style: solid;
+            }
+        </style>
+    </body>
+</html>
