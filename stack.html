@@ -78,34 +78,20 @@
         </div>
         <div id="example">
             <h2>サンプルコード</h2>
-            <p>これはStackプログラミング言語でFizzBuzz問題を解くサンプルコードです</p>
-            <pre>
-(
-    (i) var 
-    (Fizz) () 
-    i 3 mod 0 equal if
-) (fizz) var
+            <p>
+                これはStackプログラミング言語で「Hello, world!」を出力するサンプルコードです
+            </p>
+            <textarea class="form-control" id="code">
+( (name) var
+    (Hello, name !) (name) name replace print 
+) (hello) var
 
-(
-    (i) var 
-    (Buzz) () 
-    i 5 mod 0 equal if
-) (buzz) var
-
-1 101 1 range (i) (
-
-    () (msg) var
-    msg i fizz eval concat (msg) var
-    msg i buzz eval concat (msg) var
-
-    (
-        i (msg) var
-    ) ()
-    msg () equal if
-    msg print
-) for
-            </pre>
+(world) hello eval
+            </textarea>
         </div>
+        <button class="form-control btn btn-primary btn-lg"  onclick="run()">実行</button>
+        
+        <textarea class="form-control" id="result"></textarea>
         
         <!-- Contribute -->
         <div id="contribute">
@@ -138,7 +124,30 @@
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
   
-        <script>            
+        <script type="module">
+            // WebAssemblyを読み込む --- (*1)
+            import init, { run_stack } from './pkg/web_stack.js';
+            init().then(() => {
+                window.run_stack = run_stack;
+            });
+        </script>
+        <script type="text/javascript">
+            // 実行ボタンを押した時にプログラムを実行 --- (*2)
+            function run() {
+                if (!window.run_stack) { // 読み込み完了判定 --- (*3)
+                    alert('WebAssemblyの読み込みが完了していません。');
+                    return;
+                }
+                // 実行 --- (*4)
+                // コードを取得
+                const code = document.getElementById('code').value;
+                // プログラムを実行
+                const r = window.run_stack(code);
+                // 結果を出力
+                const result = document.getElementById('result');
+                result.innerHTML = r;
+            }
+
             document.addEventListener("DOMContentLoaded", function () {
                 var navbar = document.querySelector('.navbar');
                 var jumbotron = document.querySelector('.jumbotron');
@@ -210,11 +219,18 @@
                 border-color: lightslategray;
             }
 
-            pre {
+            textarea, #result, #code {
                 background-color: gainsboro;
                 color: black;
                 border-radius: 5px;
                 padding: 10px;
+                width: 100%;
+                height: 170px;
+                margin: 10px;
+            }
+
+            #result {
+                height: 250px;
             }
 
             .jumbotron {
