@@ -29,11 +29,11 @@
             // プログラムを実行
             const result = window.run_stack(code);
             // 結果を出力
-            const output = document.getElementById('output');
-            output.innerHTML = result.output();
+            const output_item = document.getElementById('output');
+            output_item.innerHTML = result.output();
 
-            const log = document.getElementById('log');
-            log.innerHTML = result.log();
+            const log_item = document.getElementById('log');
+            log_item.innerHTML = result.log();
             
         }
         
