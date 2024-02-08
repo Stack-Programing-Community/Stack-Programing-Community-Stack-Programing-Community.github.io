@@ -27,13 +27,13 @@
             // コードを取得
             const code = document.getElementById('code').value;
             // プログラムを実行
-            const r = window.run_stack(code);
+            const result = window.run_stack(code);
             // 結果を出力
             const output = document.getElementById('output');
-            output.innerHTML = r.output();
+            output.innerHTML = result.output();
 
             const log = document.getElementById('log');
-            log.innerHTML = r.log();
+            log.innerHTML = result.log();
             
         }
         
