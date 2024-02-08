@@ -29,8 +29,12 @@
             // プログラムを実行
             const r = window.run_stack(code);
             // 結果を出力
-            const result = document.getElementById('result');
-            result.innerHTML = r;
+            const output = document.getElementById('output');
+            output.innerHTML = r.output();
+
+            const log = document.getElementById('log');
+            log.innerHTML = r.log();
+            
         }
         
     </script>
@@ -41,8 +45,12 @@
 
         <textarea id="code" rows=10></textarea>
         <button class="btn form-control btn-primary" onclick="run()">実行</button>
-        <hr>
-        <textarea id="result" rows=5></textarea>
+
+        <div class="split">
+            <textarea id="output" rows=5>標準出力</textarea>
+            
+            <textarea id="log" rows=5>スタック内部</textarea>
+        </div>
     </div>
 </body>
 
@@ -53,12 +61,21 @@
     }
 
     .btn {
-        margin: 5px;
+        margin-bottom: 5px;
         background-color: lightslategray;
         border-color: lightslategray;
     }
 
-    #code, #result {
+    .split {
+        display: flex;
+        height: 200px; /* 任意の高さに調整 */
+    }
+    .split textarea {
+        flex: 1;
+        box-sizing: border-box;
+    }
+
+    #code, #output, #log {
         background-color:lightgray;
         width: 100%;
         margin-bottom: 10px;
