@@ -56,13 +56,9 @@
                 オンライン実行環境
             </a>
 
-            <a class="btn btn-primary btn-lg" href="https://qiita.com/KajizukaTaichi/items/1c3e3ee08d102bfd576c"
+            <a class="btn btn-primary btn-lg" href="https://stack-programing-community.github.io/stack-tutorial/"
                 role="button">
-                Qiita 記事
-            </a>
-
-            <a class="btn btn-primary btn-lg" href="https://note.com/super_auklet908/n/ne2fcde239cfb" role="button">
-                Note 記事
+                チュートリアル
             </a>
         </div>
         
@@ -81,18 +77,15 @@
             <p>
                 これはStackプログラミング言語で「Hello, world!」を出力するサンプルコードです
             </p>
-            <textarea class="form-control" id="code">
+            <pre class="form-control" id="code">
 ( (name) var
     (Hello, name !) (name) name replace print 
 ) (hello) var
 
 (world) hello eval
-            </textarea>
+            </pre>
         </div>
-        <button class="form-control btn btn-primary btn-lg"  onclick="run()">実行</button>
-        
-        <textarea class="form-control" id="result"></textarea>
-        
+
         <!-- Contribute -->
         <div id="contribute">
             <h2>貢献</h2>
@@ -132,22 +125,6 @@
             });
         </script>
         <script type="text/javascript">
-            // 実行ボタンを押した時にプログラムを実行 --- (*2)
-            function run() {
-                if (!window.run_stack) { // 読み込み完了判定 --- (*3)
-                    alert('WebAssemblyの読み込みが完了していません。');
-                    return;
-                }
-                // 実行 --- (*4)
-                // コードを取得
-                const code = document.getElementById('code').value;
-                // プログラムを実行
-                const r = window.run_stack(code);
-                // 結果を出力
-                const result = document.getElementById('result');
-                result.innerHTML = r;
-            }
-
             document.addEventListener("DOMContentLoaded", function () {
                 var navbar = document.querySelector('.navbar');
                 var jumbotron = document.querySelector('.jumbotron');
