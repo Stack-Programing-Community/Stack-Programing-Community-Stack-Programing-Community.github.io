@@ -76,14 +76,33 @@
         <div id="example">
             <h2>サンプルコード</h2>
             <p>
-                これはStackプログラミング言語で「Hello, world!」を出力するサンプルコードです
+                これはStackプログラミング言語でFizzBuzz問題を解くサンプルコードです
             </p>
-            <pre class="form-control" id="code">
-( (name) var
-    (Hello, name !) (name) name replace print 
-) (hello) var
+            <pre>
+(
+    (i) var
+    (Fizz) ()
+    i 3 mod 0 equal if
+) (fizz) var
 
-(world) hello eval
+(
+    (i) var
+    (Buzz) ()
+    i 5 mod 0 equal if
+) (buzz) var
+
+1 101 1 range (i) (
+
+    () (msg) var
+    msg i fizz eval concat (msg) var
+    msg i buzz eval concat (msg) var
+
+    (
+        i (msg) var
+    ) ()
+    msg () equal if
+    msg print
+) for
             </pre>
         </div>
 
@@ -99,7 +118,7 @@
         <div id="license">
             <h2>ライセンス</h2>
             <p>
-                Stackプログラミング言語はMITライセンスに基づく自由ソフトウェアです。誰もが利用や変更が出来ます。
+                Stackプログラミング言語はMITライセンスに基づく自由ソフトウェアです。誰もが利用や変更などが出来ます。
                 詳細については<a href="https://github.com/Stack-Programing-Community\Stack-Programing-Language/blob/main/LICENSE">LICENSE</a> ファイルをご覧ください
             </p>
         </div>
@@ -118,13 +137,6 @@
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
   
-        <script type="module">
-            // WebAssemblyを読み込む --- (*1)
-            import init, { run_stack } from './pkg/web_stack.js';
-            init().then(() => {
-                window.run_stack = run_stack;
-            });
-        </script>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", function () {
                 var navbar = document.querySelector('.navbar');
@@ -197,18 +209,13 @@
                 border-color: lightslategray;
             }
 
-            textarea, #result, #code {
+            pre {
                 background-color: gainsboro;
                 color: black;
                 border-radius: 5px;
                 padding: 10px;
                 width: 100%;
-                height: 170px;
-                margin: 10px;
-            }
-
-            #result {
-                height: 250px;
+                height: max-content;
             }
 
             .jumbotron {
