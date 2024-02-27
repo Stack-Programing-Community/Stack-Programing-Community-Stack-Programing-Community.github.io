@@ -2,11 +2,23 @@
     <body>
         
         <div class="stack">
-            (Hello, world! ) 5 repeat print
-        </div>
-        
-        <div class="stack">
-            22 7 div print
+            (<) (table) (>) concat concat print
+
+                1 10 1 range (i) (
+                    (<) (tr) (>) concat concat print
+                
+                    1 10 1 range (j) (
+                        (<) (td) (>) concat concat print
+
+                        i j mul print
+
+                        (<) (/td) (>) concat concat print
+                    ) for
+
+                    (<) (/tr) (>) concat concat print
+                ) for
+
+            (<) (/table) (>) concat concat print
         </div>
 
         <script src="https://stack-programing-community.github.io/stack.js" type="module"></script>
