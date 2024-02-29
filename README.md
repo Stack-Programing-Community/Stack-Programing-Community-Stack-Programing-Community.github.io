@@ -1,1 +1,1 @@
-コミュニティの公式サイト
+Community's official site
