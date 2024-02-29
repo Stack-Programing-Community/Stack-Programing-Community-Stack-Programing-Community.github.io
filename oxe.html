@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stack プログラミング言語 OXE</title>
+    <title>Stack OXE</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
@@ -11,7 +11,6 @@
 </head>
 <body>
     <script type="module">
-        // WebAssemblyを読み込む --- (*1)
         import init, { run_stack } from './pkg/web_stack.js';
         init().then(() => {
             window.run_stack = run_stack;
@@ -19,18 +18,15 @@
     </script>
 
     <script type="text/javascript">
-        // 実行ボタンを押した時にプログラムを実行 --- (*2)
         function run() {
-            if (!window.run_stack) { // 読み込み完了判定 --- (*3)
-                alert('WebAssemblyの読み込みが完了していません。');
+            if (!window.run_stack) {
+                alert('WebAssembly has not finished loading. ');
                 return;
             }
-            // 実行 --- (*4)
-            // コードを取得
+
             const code = document.getElementById('code').value;
-            // プログラムを実行
             const result = window.run_stack(code);
-            // 結果を出力
+
             const output_item = document.getElementById('output');
             output_item.innerHTML = result.output();
 
@@ -48,15 +44,13 @@
         document.addEventListener("keydown", function (event) {
             if (event.key == "Tab") {
                 event.preventDefault(false);
-                // スペース4を挿入
                 var me = document.activeElement;
 
                 var cursorPosition = me.selectionStart;
                 var text = me.value;
-                var tab = "\t"; // スペース4
+                var tab = "\t"; 
                 me.value = text.substring(0, cursorPosition) + tab + text.substring(me.selectionEnd);
 
-                // カーソル位置を調整
                 me.selectionStart = me.selectionEnd = cursorPosition + tab.length;
             }
         });  
@@ -70,7 +64,7 @@
     </script>
         
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="#">Stack プログラミング言語　オンライン実行環境</a>            
+        <a class="navbar-brand" href="#">Stack Programming language online execution environment</a>            
     </nav>
 
     <div id="main">
@@ -79,8 +73,8 @@
         <button class="btn form-control btn-primary" onclick="run()">実行</button>
 
         <div class="split">
-            <textarea id="output" rows=5>標準出力</textarea>
-            <textarea id="log" rows=5>スタック内部</textarea>
+            <textarea id="output" rows=5>Standard output</textarea>
+            <textarea id="log" rows=5>Inside stack</textarea>
         </div>
     </div>
 </body>
@@ -108,11 +102,11 @@
     }
 
     #output {
-        flex-grow: 150; /* outputテキストエリアの伸縮性を1に設定 */
+        flex-grow: 150;
     }
 
     #log {
-        flex-grow: 150; /* logテキストエリアの伸縮性を2に設定 */
+        flex-grow: 150;
     }
 
     #code {
