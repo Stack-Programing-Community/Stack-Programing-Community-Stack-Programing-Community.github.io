@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stack Programming Language</title>
+    <title>Stack</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
@@ -27,35 +27,32 @@
         <p class="lead">The powerful script language designed with a stack oriented approach for efficient execution.
         </p>
         <hr class="my-4">
-        <a class="btn btn-primary btn-lg"
-            href="https://github.com/Stack-Programing-Community/Stack-Programing-Language/" role="button">
-            Github repository
-        </a>
-
-        <a class="btn btn-primary btn-lg" href="/oxe.html" role="button">
-            Online execution environment
-        </a>
-
-        <a class="btn btn-primary btn-lg" href="https://stack-programing-community.github.io/stack-tutorial/"
-            role="button">
-            tutorial
-        </a>
+        
+        <div class="d-inline-flex align-items-center">
+            <a class="btn btn-primary btn-lg"
+                href="https://github.com/Stack-Programing-Community/Stack-Programing-Language/" role="button">
+                Github repository
+            </a>
+            
+            <span class="inline-news btn-primary btn-lg"><span class="badge badge-secondary">News!</span>　implemented special data type "error", it became can error processing</span>
+        </div>
     </div>
 
     <!-- Features -->
     <div id="features">
         <h2>Features</h2>
         <ul class="feature-list">
-            <li>Efficient stack-oriented execution model</li>
-            <li>Clear, easy-to-understand and elegant syntax</li>
-            <li>Rich of convenient and highly extensible commands</li>
-            <li>Dynamic and flexible data types system</li>
+            <li>Efficient stack oriented execution model： very fast execution as script language, easy to debug too</li>
+            <li>Clear, easy to understand and elegant syntax： separate data and commands with spaces, no ambiguity</li>
+            <li>Rich of convenient and highly extensible commands： from simple calculate to Regex and HTTP request</li>
+            <li>Dynamic and flexible data types system： you don't have to worry for normal confusing type system</li>
         </ul>
+        <br>
     </div>
     <div id="example">
         <h2>Sample code</h2>
         <p>
-            This is a sample code to solve FizzBuzz problem in Stack programming language
+            This is a sample code to solve <a href="https://en.wikipedia.org/wiki/Fizz_buzz">FizzBuzz</a> problem in Stack programming language. Isn't it elegant?
         </p>
         <pre>
 1 101 1 range (i) (
@@ -71,6 +68,24 @@
              </pre>
     </div>
 
+    <div id="install">
+        <h2>Install</h2>
+        <p>
+           You can install Stack programming language in the your computer at <a
+                href="https://github.com/Stack-Programing-Community/Stack-Programing-Language/releases/">Regularly Release</a>.
+            <br>
+
+            If you have commands "git" and "cargo", you can run below commands to install stack programming language.
+            <br>that's you can get latest functions before the regularly releases. but, the functions are not stable.
+
+            <pre>
+git clone https://github.com/Stack-Programing-Community/Stack-Programing-Language.git
+cd Stack-Programing-Language
+cargo build --release
+cargo install --path .</pre>
+        </p>
+    </div>
+
     <!-- Contribute -->
     <div id="contribute">
         <h2>Contribution</h2>
@@ -84,7 +99,7 @@
     <div id="license">
         <h2>License</h2>
         <p>
-            The Stack programming language is freedom and open-source software under the MIT license. Anyone can use and change it.
+            The Stack programming language is freedom and open source software under the MIT license. Anyone can use and change it.
             See the <a
                 href="https://github.com/Stack-Programing-Community\Stack-Programing-Language/blob/main/LICENSE">LICENSE</a>
             file for more information
@@ -96,7 +111,7 @@
         <h2>Community</h2>
         <p>
             The Stack programming language is developed by the community.
-            Would you like to join the <a href="https://github.com/Stack-Programing-Community">Community</a>?
+            Would you like to join the our <a href="https://github.com/Stack-Programing-Community">Community</a>?
         </p>
     </div>
         
@@ -171,8 +186,16 @@
                 font-weight: 20;
             }
 
+            .inline-news {
+                display: inline-block;
+                background-color: #5b6e75;
+                margin-left: 20px;
+                background: linear-gradient(45deg, rgba(255,255,255,0.5), rgba(255,255,255,0.2));
+            }
+
+
             .btn {
-                margin: 5px;
+                display: inline-block;
                 background-color: lightslategray;
                 border-color: lightslategray;
             }
