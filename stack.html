@@ -1,238 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stack</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Stack</title>
+        <!-- Bootstrap CSS -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    </head>
 
-<body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="#">Stack Programming Language</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    </nav>
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <a class="navbar-brand" href="#">Stack Programming Language</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
 
-    <!-- Jumbotron -->
-    <div class="jumbotron">
-        <h1 class="display-4">Stack Programming Language</h1>
-        <p class="lead">The powerful script language designed with a stack oriented approach for efficient execution.
-        </p>
-        <hr class="my-4">
-        
-        <div class="d-inline-flex align-items-center">
-            <a class="btn btn-secondary btn-lg"
-                href="https://github.com/Stack-Programing-Community/Stack-Programing-Language/" role="button">
-                Github repository
-            </a>
+        <!-- Jumbotron -->
+        <div class="jumbotron">
+            <h1 class="display-4">Stack Programming Language</h1>
+            <p class="lead">The powerful script language designed with a stack oriented approach for efficient execution.
+            </p>
+            <hr class="my-4">
             
-            <span class="inline-news btn-secondary btn-lg"><span class="badge badge-secondary">News!</span>　implemented command "case", it became can change string style case</span>
+            <div class="d-inline-flex align-items-center">
+                <a class="btn btn-secondary btn-lg"
+                    href="https://github.com/Stack-Programing-Community/Stack-Programing-Language/" role="button">
+                    Github repository
+                </a>
+                
+                <span class="inline-news btn-secondary btn-lg"><span class="badge badge-secondary">News!</span>　implemented command "case", it became can change string style case</span>
+            </div>
         </div>
-    </div>
 
-    <!-- Features -->
-    <div id="features">
-        <h2>Features</h2>
-        <ul class="feature-list">
-            <li>Efficient stack oriented execution model： very fast execution as script language, easy to debug too</li>
-            <li>Clear, easy to understand and elegant syntax： separate data and commands with spaces, no ambiguity</li>
-            <li>Rich of convenient and highly extensible commands： from simple calculate to Regex and HTTP request</li>
-            <li>Dynamic and flexible data types system： you don't have to worry for normal confusing type system</li>
-        </ul>
-        <br>
-    </div>
-    <div id="example">
-        <h2>Example code</h2>
-        <p>
-            This is a <a href="https://github.com/Stack-Programing-Community/Example-Programs/">example code</a> to solve <a href="https://en.wikipedia.org/wiki/Fizz_buzz">FizzBuzz</a> problem in Stack programming language. Isn't it elegant?
-        </p>
-        <pre>
-1 101 1 range (i) (
-     (FizzBuzz) (
-         (Fizz) (
-             (Buzz) i
-             i 5 mod 0 equal if
-         )
-         i 3 mod 0 equal if
-     )
-     i 15 mod 0 equal if
-) map ( ) join print
-             </pre>
-             
-             <p>If you want to run script of Stack programing language, you must have interpreter.
-            </p> </div>
-
-    <div id="install">
-        <h2>Install</h2>
-        <p>
-           You can install Stack programming language's interpreter by <a
-                href="https://github.com/Stack-Programing-Community/Stack-Programing-Language/releases/">regularly release</a>
-                in the your computer .
+        <!-- Features -->
+        <div id="features">
+            <h2>Features</h2>
+            <ul class="feature-list">
+                <li>Efficient stack oriented execution model： very fast execution as script language, easy to debug too</li>
+                <li>Clear, easy to understand and elegant syntax： separate data and commands with spaces, no ambiguity</li>
+                <li>Rich of convenient and highly extensible commands： from simple calculate to Regex and HTTP request</li>
+                <li>Dynamic and flexible data types system： you don't have to worry for normal confusing type system</li>
+            </ul>
             <br>
-
-            If you have commands "git" and "cargo", you can also run below commands to install Stack programming language.
-            <br>that's you can get latest functions before the regularly releases. but, the functions are not stable.
-
+        </div>
+        <div id="example">
+            <h2>Example code</h2>
+            <p>
+                This is a <a href="https://github.com/Stack-Programing-Community/Example-Programs/">example code</a> to solve <a href="https://en.wikipedia.org/wiki/Fizz_buzz">FizzBuzz</a> problem in Stack programming language. Isn't it elegant?
+            </p>
             <pre>
-git clone https://github.com/Stack-Programing-Community/Stack-Programing-Language.git
-cd Stack-Programing-Language
-cargo build --release
-cargo install --path .</pre>
-        </p>
+    1 101 1 range (i) (
+        (FizzBuzz) (
+            (Fizz) (
+                (Buzz) i
+                i 5 mod 0 equal if
+            )
+            i 3 mod 0 equal if
+        )
+        i 15 mod 0 equal if
+    ) map ( ) join print
+                </pre>
+                
+                <p>If you want to run script of Stack programing language, you must have interpreter.
+                </p> </div>
 
-        <p>
-            Stack programming language is freedom and open source software under the MIT license. 
-            <br>Anyone can use, copy, modify, merge, publish, distribute, sublicenseuse, and sell of the Stack programming language.
-         <br>   See the <a
-                href="https://github.com/Stack-Programing-Community\Stack-Programing-Language/blob/main/LICENSE">LICENSE</a>
-            file for details information
-        </p>
-    </div>
+        <div id="install">
+            <h2>Install</h2>
+            <p>
+            You can install Stack programming language's interpreter by <a
+                    href="https://github.com/Stack-Programing-Community/Stack-Programing-Language/releases/">regularly release</a>
+                    in the your computer .
+                <br>
 
-    <!-- Contribute -->
-    <div id="develop">
-        
-        <h2>Develop</h2>
+                If you have commands "git" and "cargo", you can also run below commands to install Stack programming language.
+                <br>that's you can get latest functions before the regularly releases. but, the functions are not stable.
 
-        <p>
-            Stack programming language is developed by the community.
-            Would you like to join the our <a href="https://github.com/Stack-Programing-Community">community</a>?
-            <br>
-            Any contributions are welcome! Feel free to open a 
-            <a href="https://github.com/Stack-Programing-Community/Stack-Programing-Language/pulls">pull request</a> and make the Stack programming language
-            more better.
-        </p>
+                <pre>
+    git clone https://github.com/Stack-Programing-Community/Stack-Programing-Language.git
+    cd Stack-Programing-Language
+    cargo build --release
+    cargo install --path .</pre>
+            </p>
 
-    </div>
-        
-        <!-- Bootstrap JS and dependencies -->
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-  
-        <script type="text/javascript">
-            document.addEventListener("DOMContentLoaded", function () {
-                var navbar = document.querySelector('.navbar');
-                var jumbotron = document.querySelector('.jumbotron');
+            <p>
+                Stack programming language is freedom and open source software under the MIT license. 
+                <br>Anyone can use, copy, modify, merge, publish, distribute, sublicenseuse, and sell of the Stack programming language.
+            <br>   See the <a
+                    href="https://github.com/Stack-Programing-Community\Stack-Programing-Language/blob/main/LICENSE">LICENSE</a>
+                file for details information
+            </p>
+        </div>
 
-                navbar.style.transition = "transform 0.5s";
-                navbar.style.transform = "translateY(-100%)";
+        <!-- Contribute -->
+        <div id="develop">
+            
+            <h2>Develop</h2>
 
-                var jumbotronVisible = false;
+            <p>
+                Stack programming language is developed by the community.
+                Would you like to join the our <a href="https://github.com/Stack-Programing-Community">community</a>?
+                <br>
+                Any contributions are welcome! Feel free to open a 
+                <a href="https://github.com/Stack-Programing-Community/Stack-Programing-Language/pulls">pull request</a> and make the Stack programming language
+                more better.
+            </p>
 
-                function checkJumbotronVisibility() {
-                    var jumbotronRect = jumbotron.getBoundingClientRect();
-                    jumbotronVisible = (
-                        jumbotronRect.top >= -150 &&
-                        jumbotronRect.left >= -150 &&
-                        jumbotronRect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-                        jumbotronRect.right <= (window.innerWidth || document.documentElement.clientWidth)
-                    );
+            <h2>Conference</h2>
+
+            <p>
+                March 16, 2024: It will host the Stack Programming Community 1st Conference to solidify the direction of the language.
+                <br>See the <a href="/agenda.html">agenda page</a> to details information.
+            </p>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/BZRVPaXGSzk" frameborder="0" allowfullscreen></iframe>
+
+        </div>
+    </body>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function () {
+            var navbar = document.querySelector('.navbar');
+            var jumbotron = document.querySelector('.jumbotron');
+
+            navbar.style.transition = "transform 0.5s";
+            navbar.style.transform = "translateY(-100%)";
+
+            var jumbotronVisible = false;
+
+            function checkJumbotronVisibility() {
+                var jumbotronRect = jumbotron.getBoundingClientRect();
+                jumbotronVisible = (
+                    jumbotronRect.top >= -150 &&
+                    jumbotronRect.left >= -150 &&
+                    jumbotronRect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    jumbotronRect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
+
+            function toggleNavbar() {
+                if (!jumbotronVisible) {
+                    navbar.style.transform = "translateY(0%)";
+                } else {
+                    navbar.style.transform = "translateY(-100%)";
                 }
+            }
 
-                function toggleNavbar() {
-                    if (!jumbotronVisible) {
-                        navbar.style.transform = "translateY(0%)";
-                    } else {
-                        navbar.style.transform = "translateY(-100%)";
-                    }
-                }
-
-                window.addEventListener('scroll', function () {
-                    checkJumbotronVisibility();
-                    toggleNavbar();
-                });
-
+            window.addEventListener('scroll', function () {
                 checkJumbotronVisibility();
                 toggleNavbar();
             });
-        </script>
+
+            checkJumbotronVisibility();
+            toggleNavbar();
+        });
+    </script>
 
 
-        <style>
-            body {
-                font-family: Arial, Helvetica, sans-serif;
-                padding: 20px;
-            }
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 20px;
+        }
 
-            h2 {
-                font-weight: 450;
-            }
+        h2 {
+            font-weight: 450;
+        }
 
-            .display-4 {
-                font-weight: 500;
-            }
+        .display-4 {
+            font-weight: 500;
+        }
 
-            p,
-            li,
-            a,
-            .lead {
-                font-weight: 400;
-                font-size: x-large;
-            }
+        p,
+        li,
+        a,
+        .lead {
+            font-weight: 400;
+            font-size: x-large;
+        }
 
-            nav {
-                margin-bottom: 30px;
-                font-weight: 20;
-            }
+        nav {
+            margin-bottom: 30px;
+            font-weight: 20;
+        }
 
-            .inline-news {
-                display: inline-block;
-                background-color: #5b6e75;
-                margin-left: 20px;
-                background: linear-gradient(45deg, rgba(255,255,255,0.5), rgba(255,255,255,0.2));
-            }
+        .inline-news {
+            display: inline-block;
+            background-color: #5b6e75;
+            margin-left: 20px;
+            background: linear-gradient(45deg, rgba(255,255,255,0.5), rgba(255,255,255,0.2));
+        }
 
 
-            .btn {
-                display: inline-block;
-                background-color: lightslategray;
-                border-color: lightslategray;
-            }
+        .btn {
+            display: inline-block;
+            background-color: lightslategray;
+            border-color: lightslategray;
+        }
 
-            pre {
-                background-color: gainsboro;
-                color: black;
-                border-radius: 5px;
-                padding: 10px;
-                width: 100%;
-                height: max-content;
-            }
+        pre {
+            background-color: gainsboro;
+            color: black;
+            border-radius: 5px;
+            padding: 10px;
+            width: 100%;
+            height: max-content;
+        }
 
-            .jumbotron {
-                background-color: #343a40;
-                color: #ffffff;
-                padding: 30px;
-            }
+        .jumbotron {
+            background-color: #343a40;
+            color: #ffffff;
+            padding: 30px;
+        }
 
-            .feature-list {
-                list-style-type: decimal;
-                padding: 5;
-            }
+        .feature-list {
+            list-style-type: decimal;
+            padding: 5;
+        }
 
-            .my-4 {
-                background-color: lightgray;
-            }
+        .my-4 {
+            background-color: lightgray;
+        }
 
-            .feature-list li {
-                padding: 8px 0;
-            }
+        .feature-list li {
+            padding: 8px 0;
+        }
 
-            h2 {
-                padding: 10px 0;
-                font-size: xx-large;
-                border-bottom-color: #343a40;
-                border-bottom-width: 2px;
-                border-bottom-style: solid;
-            }
-        </style>
-    </body>
+        h2 {
+            padding: 10px 0;
+            font-size: xx-large;
+            border-bottom-color: #343a40;
+            border-bottom-width: 2px;
+            border-bottom-style: solid;
+        }
+    </style>
 </html>
