@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">Stack 编程语言</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="切换导航">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+
+    <!-- 大标题 -->
+    <div class="jumbotron">
+        <h1 class="display-4">Stack 编程语言</h1>
+        <p class="lead">设计为栈导向方法以实现高效执行的强大脚本语言。</p>
+        <hr class="my-4">
+        
+        <div class="d-inline-flex align-items-center">
+            <a class="btn btn-secondary btn-lg"
+                href="https://github.com/Stack-Programing-Community/Stack-Programing-Language/" role="button">
+                GitHub 仓库
+            </a>
+            
+            <span class="inline-news btn-secondary btn-lg"><span class="badge badge-secondary">新闻！</span> 实现了 "cls" 命令，可以清除控制台的显示。</span>
+        </div>
+    </div>
+
+    <!-- 特性 -->
+    <div id="features">
+        <h2>特性</h2>
+        <ul class="feature-list">
+            <li>高效的栈导向执行模型：作为脚本语言，执行速度非常快，也很容易调试</li>
+            <li>清晰、易于理解且优雅的语法：用空格分隔数据和命令，没有歧义</li>
+            <li>丰富的便利且高度可扩展的命令：从简单计算到正则表达式和 HTTP 请求</li>
+            <li>动态且灵活的数据类型系统：您不必担心常规混乱的类型系统</li>
+        </ul>
+        <br>
+    </div>
+    <div id="example">
+        <h2>示例代码</h2>
+        <p>
+            这是用 Stack 编程语言解决<a href="https://en.wikipedia.org/wiki/Fizz_buzz">FizzBuzz</a>问题的<a href="https://github.com/Stack-Programing-Community/Example-Programs/">示例代码</a>。是不是很优雅？
+        </p>
+        <pre>
+1 101 1 range (i) (
+    (FizzBuzz) (
+        (Fizz) (
+            (Buzz) i
+            i 5 mod 0 equal if
+        )
+        i 3 mod 0 equal if
+    )
+    i 15 mod 0 equal if
+) map ( ) join print
+        </pre>
+        
+        <p>
+            您可以使用<a href="/oxe.html">在线执行环境</a>尝试运行 Stack 编程语言的这个脚本。
+            <br>如果要在计算机上运行 Stack 编程语言的脚本，则必须安装解释器。
+        </p>
+    </div>
+
+    <div id="install">
+        <h2>安装</h2>
+        <p>
+            您可以通过<a
+                href="https://github.com/Stack-Programing-Community/Stack-Programing-Language/releases/">定期发布</a>
+                在您的计算机上安装 Stack 编程语言的解释器。
+            <br>
+
+            如果您有 "git" 和 "cargo" 命令，也可以运行以下命令安装 Stack 编程语言。
+            <br>这样您可以在定期发布之前获取最新功能，但这些功能不稳定。
+
+            <pre>
+git clone https://github.com/Stack-Programing-Community/Stack-Programing-Language.git
+cd Stack-Programing-Language
+cargo build --release
+cargo install --path .</pre>
+        </p>
+
+        <p>
+            Stack 编程语言是根据 MIT 许可证自由和开源的软件。
+            <br>任何人都可以使用、复制、修改、合并、发布、分发、许可、销售 Stack 编程语言。
+            <br>有关详细信息，请参阅<a
+                href="https://github.com/Stack-Programing-Community\Stack-Programing-Language/blob/main/LICENSE">许可证</a>
+            文件。
+        </p>
+    </div>
+
+    <!-- 贡献 -->
+    <div id="develop">
+        
+        <h2>开发</h2>
+
+        <p>
+            Stack 编程语言是由社区开发的。
+            您想加入我们的<a href="https://github.com/Stack-Programing-Community">社区</a>吗？
+            <br>欢迎任何贡献！请随时打开<a href="https://github.com/Stack-Programing-Community/Stack-Programing-Language/pulls">拉取请求</a>，使 Stack 编程语言变得更好。
+        </p>
+
+        <h2>会议</h2>
+
+        <p>
+            2024年3月16日：Stack 编程社区举办了第一次会议，以巩固语言的发展方向。
+            <br>查看<a href="/agenda.html">议程页面</a>了解本次会议的议程。
+
+            本次会议的结论在<a href="/roadmap.html">路线图页面</a>上。
+            <br>您可以观看下面的YouTube视频了解所有会议内容。但是，因为所有成员都是日本人，所以使用了日语。
+        </p>
+
+        <iframe width="650" height="340" src="https://www.youtube.com/embed/OqWDIhyjyCc" frameborder="0" allowfullscreen></iframe>
+        <iframe width="650" height="340" src="https://www.youtube.com/embed/mN2h6beGmUQ" frameborder="0" allowfullscreen></iframe>
+
+
+    </div>
+</body>
+
+<!-- Bootstrap JS 和依赖项 -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function () {
+        var navbar = document.querySelector('.navbar');
+        var jumbotron = document.querySelector('.jumbotron');
+
+        navbar.style.transition = "transform 0.5s";
+        navbar.style.transform = "translateY(-100%)";
+
+        var jumbotronVisible = false;
+
+        function checkJumbotronVisibility() {
+            var jumbotronRect = jumbotron.getBoundingClientRect();
+            jumbotronVisible = (
+                jumbotronRect.top >= -150 &&
+                jumbotronRect.left >= -150 &&
+                jumbotronRect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                jumbotronRect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        function toggleNavbar() {
+            if (!jumbotronVisible) {
+                navbar.style.transform = "translateY(0%)";
+            } else {
+                navbar.style.transform = "translateY(-100%)";
+            }
+        }
+
+        window.addEventListener('scroll', function () {
+            checkJumbotronVisibility();
+            toggleNavbar();
+        });
+
+        checkJumbotronVisibility();
+        toggleNavbar();
+    });
+</script>
+
+
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 20px;
+    }
+
+    h2 {
+        font-weight: 450;
+    }
+
+    .display-4 {
+        font-weight: 500;
+    }
+
+    p,
+    li,
+    a,
+    .lead {
+        font-weight: 400;
+        font-size: x-large;
+    }
+
+    nav {
+        margin-bottom: 30px;
+        font-weight: 20;
+    }
+
+    .inline-news {
+        display: inline-block;
+        background-color: #5b6e75;
+        margin-left: 20px;
+        background: linear-gradient(45deg, rgba(255,255,255,0.5), rgba(255,255,255,0.2));
+    }
+
+
+    .btn {
+        display: inline-block;
+        background-color: lightslategray;
+        border-color: lightslategray;
+    }
+
+    pre {
+        background-color: gainsboro;
+        color: black;
+        border-radius: 5px;
+        padding: 10px;
+        width: 100%;
+        height: max-content;
+    }
+
+    .jumbotron {
+        background-color: #343a40;
+        color: #ffffff;
+        padding: 30px;
+    }
+
+    .feature-list {
+        list-style-type: decimal;
+        padding: 5;
+    }
+
+    .my-4 {
+        background-color: lightgray;
+    }
+
+    .feature-list li {
+        padding: 8px 0;
+    }
+
+    h2 {
+        padding: 10px 0;
+        font-size: xx-large;
+        border-bottom-color: #343a40;
+        border-bottom-width: 2px;
+        border-bottom-style: solid;
+    }
+</style>
+</html>
