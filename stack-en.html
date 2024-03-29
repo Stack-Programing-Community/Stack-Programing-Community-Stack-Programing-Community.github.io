@@ -84,7 +84,7 @@
                 <br>that's you can get latest functions before the regularly releases. but, the functions are not stable.
 
                 <pre>
-git clone https://github.com/stack-community/Stack-Programing-Language.git
+git clone https://github.com/stack-community/stack-lang.git
 cd Stack-Programing-Language
 cargo build --release
 cargo install --path .</pre>
@@ -136,120 +136,7 @@ cargo install --path .</pre>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
-    <script type="text/javascript">
-        document.addEventListener("DOMContentLoaded", function () {
-            var navbar = document.querySelector('.navbar');
-            var jumbotron = document.querySelector('.jumbotron');
+    <script src="script.js"></script>
 
-            navbar.style.transition = "transform 0.5s";
-            navbar.style.transform = "translateY(-100%)";
-
-            var jumbotronVisible = false;
-
-            function checkJumbotronVisibility() {
-                var jumbotronRect = jumbotron.getBoundingClientRect();
-                jumbotronVisible = (
-                    jumbotronRect.top >= -150 &&
-                    jumbotronRect.left >= -150 &&
-                    jumbotronRect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-                    jumbotronRect.right <= (window.innerWidth || document.documentElement.clientWidth)
-                );
-            }
-
-            function toggleNavbar() {
-                if (!jumbotronVisible) {
-                    navbar.style.transform = "translateY(0%)";
-                } else {
-                    navbar.style.transform = "translateY(-100%)";
-                }
-            }
-
-            window.addEventListener('scroll', function () {
-                checkJumbotronVisibility();
-                toggleNavbar();
-            });
-
-            checkJumbotronVisibility();
-            toggleNavbar();
-        });
-    </script>
-
-
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            padding: 20px;
-        }
-
-        h2 {
-            font-weight: 450;
-        }
-
-        .display-4 {
-            font-weight: 500;
-        }
-
-        p,
-        li,
-        a,
-        .lead {
-            font-weight: 400;
-            font-size: x-large;
-        }
-
-        nav {
-            margin-bottom: 30px;
-            font-weight: 20;
-        }
-
-        .inline-news {
-            display: inline-block;
-            background-color: #5b6e75;
-            margin-left: 20px;
-            background: linear-gradient(45deg, rgba(255,255,255,0.5), rgba(255,255,255,0.2));
-        }
-
-
-        .btn {
-            display: inline-block;
-            background-color: lightslategray;
-            border-color: lightslategray;
-        }
-
-        pre {
-            background-color: gainsboro;
-            color: black;
-            border-radius: 5px;
-            padding: 10px;
-            width: 100%;
-            height: max-content;
-        }
-
-        .jumbotron {
-            background-color: #343a40;
-            color: #ffffff;
-            padding: 30px;
-        }
-
-        .feature-list {
-            list-style-type: decimal;
-            padding: 5;
-        }
-
-        .my-4 {
-            background-color: lightgray;
-        }
-
-        .feature-list li {
-            padding: 8px 0;
-        }
-
-        h2 {
-            padding: 10px 0;
-            font-size: xx-large;
-            border-bottom-color: #343a40;
-            border-bottom-width: 2px;
-            border-bottom-style: solid;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </html>
