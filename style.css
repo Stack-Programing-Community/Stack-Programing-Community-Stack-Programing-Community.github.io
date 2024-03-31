@@ -7,6 +7,10 @@ h2 {
     font-weight: 450;
 }
 
+span {
+    margin-right: 15px;
+}
+
 .display-4 {
     font-weight: 500;
 }
