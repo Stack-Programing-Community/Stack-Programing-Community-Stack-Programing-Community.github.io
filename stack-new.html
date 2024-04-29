@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <title>Stack</title>
+    </head>
+
+    <body>
+        <div class="d-flex justify-content-center m mt-5">
+            
+        </div>
+    </body>
+
+    <div class="jumbotron">
+        <img id="logo" src="anime.gif" alt="Logo anime">
+        <p class="lead luminescence">The powerful script language designed with a stack oriented approach for efficient execution.</p>
+        <hr class="my-4">
+        <a class="btn btn-primary btn-lg" href="https://github.com/stack-community" role="button">Github</a>
+    </div>
+        
+    <style>
+        .jumbotron {
+            background-color: black;
+            color:azure;
+        }
+
+        .my-4 {
+            background-color: azure;
+        }
+
+        body {
+            margin: 3%;
+        }
+        
+        #logo {
+            width: 50%;
+        }
+    </style>
+
+    <script>
+        // .luminescenceクラスの要素を取得
+        const luminescenceElements = document.querySelectorAll('.luminescence');
+
+        // マウスカーソルが要素に入った時の処理
+        function handleMouseEnter() {
+            // 要素の背景色を青白く明るくする
+            this.style.color = '#b4edff';
+            this.style.textShadow = "0 0 20px rgba(255, 255, 255, 0.8)";
+            setGradientText(this, "#b4edff", "blue");
+        }
+
+        function setGradientText(element, startColor, endColor) {
+            element.style.background = "linear-gradient(45deg, " + startColor + ", " + endColor + ")";
+            element.style.webkitBackgroundClip = "text"; // WebKit ベンダープレフィックス
+            element.style.webkitTextFillColor = "transparent"; // WebKit ベンダープレフィックス
+        }
+
+        function delGradientText(element) {
+            element.style.background = "";
+            element.style.webkitBackgroundClip = ""; // WebKit ベンダープレフィックス
+            element.style.webkitTextFillColor = ""; // WebKit ベンダープレフィックス
+        }
+
+        // マウスカーソルが要素から出た時の処理
+        function handleMouseLeave() {
+            // 要素の背景色を元に戻す
+            this.style.color = '';
+            this.style.textShadow = '';
+            delGradientText(this);
+        }
+
+        // 各要素にイベントリスナーを追加する
+        luminescenceElements.forEach(element => {
+            element.addEventListener('mouseenter', handleMouseEnter);
+            element.addEventListener('mouseleave', handleMouseLeave);
+        });
+    </script>
+</html>
