@@ -18,23 +18,54 @@
 
     <div class="jumbotron">
         <img id="logo" src="anime.gif" alt="Logo anime">
-        <p class="lead luminescence">The powerful script language designed with a stack oriented approach for efficient execution.</p>
         <hr class="my-4">
-        <a class="btn btn-primary btn-lg" href="https://github.com/stack-community" role="button">Github</a>
+        <div class="d-flex align-items-center col-12 clearfix">
+            <a class="btn btn-primary btn-lg" href="https://github.com/stack-community" role="button">Github</a>
+            <p class="luminescence">The powerful script language designed with a stack oriented approach for efficient execution.</p>
+        </div>
     </div>
+
+    <div class="jumbotron">
+        <h1 class="luminescence">Why Stack ?</h1>
+        <hr class="my-4">
+
+        <li>
+            <ul class="luminescence">Efficient stack oriented execution model: very fast execution as script language, easy to debug too</ul>
+            <ul class="luminescence">Clear, easy to understand and elegant syntax: separate data and commands with spaces, no ambiguity</ul>
+            <ul class="luminescence">Rich of convenient and highly extensible commands: from simple calculate to Regex and HTTP request</ul>
+            <ul class="luminescence">Dynamic and flexible data types system: you don't have to worry for normal confusing type system</ul>
+        </li>
         
     <style>
         .jumbotron {
             background-color: black;
             color:azure;
+            padding: 2%;
+        }
+        
+        ul, p, a {
+            font-size: 150%;
+            margin-bottom: 0px;
+            font-weight: light;
         }
 
+
+        a {
+            margin-right: 1%;
+        }
+
+        .btn {
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);   
+            background: linear-gradient(45deg, blue, blueviolet);
+            border-style: none;
+        }
         .my-4 {
             background-color: azure;
         }
-
+        
         body {
-            margin: 3%;
+            margin-top: -3%;
+            padding: 1%;
         }
         
         #logo {
@@ -43,38 +74,37 @@
     </style>
 
     <script>
-        // .luminescenceクラスの要素を取得
         const luminescenceElements = document.querySelectorAll('.luminescence');
 
-        // マウスカーソルが要素に入った時の処理
         function handleMouseEnter() {
-            // 要素の背景色を青白く明るくする
             this.style.color = '#b4edff';
             this.style.textShadow = "0 0 20px rgba(255, 255, 255, 0.8)";
-            setGradientText(this, "#b4edff", "blue");
+            setGradientText(this, "lightblue", "blue");
         }
 
         function setGradientText(element, startColor, endColor) {
             element.style.background = "linear-gradient(45deg, " + startColor + ", " + endColor + ")";
-            element.style.webkitBackgroundClip = "text"; // WebKit ベンダープレフィックス
-            element.style.webkitTextFillColor = "transparent"; // WebKit ベンダープレフィックス
+            element.style.webkitBackgroundClip = "text"; 
+            element.style.webkitTextFillColor = "transparent"; 
+        }
+
+        function sleep(ms) {
+           const start = new Date().getTime();
+           while (new Date().getTime() - start < ms);
         }
 
         function delGradientText(element) {
             element.style.background = "";
-            element.style.webkitBackgroundClip = ""; // WebKit ベンダープレフィックス
-            element.style.webkitTextFillColor = ""; // WebKit ベンダープレフィックス
+            element.style.webkitBackgroundClip = ""; 
+            element.style.webkitTextFillColor = "";
         }
 
-        // マウスカーソルが要素から出た時の処理
         function handleMouseLeave() {
-            // 要素の背景色を元に戻す
             this.style.color = '';
             this.style.textShadow = '';
             delGradientText(this);
         }
 
-        // 各要素にイベントリスナーを追加する
         luminescenceElements.forEach(element => {
             element.addEventListener('mouseenter', handleMouseEnter);
             element.addEventListener('mouseleave', handleMouseLeave);
