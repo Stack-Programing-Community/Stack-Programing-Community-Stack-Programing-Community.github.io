@@ -17,7 +17,7 @@
     </body>
 
     <div class="jumbotron">
-        <video autoplay>
+        <video autoplay muted playsinline>
             <source src="anime.mp4" type="video/mp4">
         Your browser does not support the video tag.
         </video> 
@@ -25,7 +25,7 @@
         <hr class="my-4">
         <div class="d-flex align-items-center col-12 clearfix">
             <a class="btn btn-primary btn-lg" href="https://github.com/stack-community" role="button">Github</a>
-            <p class="luminescence">The powerful script language with a stack-oriented type.</p>
+            <p class="luminescence">Powerful script language with stack-oriented paradigm</p>
         </div>
     </div>
 
@@ -33,7 +33,7 @@
         <h1 class="luminescence">Why Stack ?</h1>
         <hr class="my-4">
 
-        <p class="luminescence">Why does many programmer loves Stack? that reasons are bolow 4 point.</p>
+        <p class="luminescence">Stack is used numerous development project. that reasons are bolow 4 point.</p>
 
         <ul>
             <li class="luminescence">Efficient execution: stack-base model is recruitmented as execution logic, it can run fast</li>
@@ -41,6 +41,24 @@
             <li class="luminescence">Multi-paradigm language: support many programming paradigm from functionnal to object-oriented</li>
             <li class="luminescence">Variety distribution: for many use-cases from use shell script to build web server, etc</li>
         </ul>
+    </div>
+
+    <div class="jumbotron">
+        <h1 class="luminescence">Learn</h1>
+        <hr class="my-4">
+
+        <p class="luminescence">We recommend read official documents to learn Stack.</p>
+
+        <a class="btn btn-primary btn-lg" href="https://stack-community.github.io/documents" role="button">Read documents</a>
+    </div>
+
+    <div class="jumbotron">
+        <h1 class="luminescence">Community</h1>
+        <hr class="my-4">
+
+        <p class="luminescence">Stack is developed by Stack Programming Community (SPC). We are communicate on below discord server</p>
+
+        <iframe src="https://discord.com/widget?id=1218489177247580230&theme=dark" width="100%" height="300" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
     </div>
         
     <style>
@@ -50,20 +68,29 @@
             padding: 2%;
         }
         
-        ul, p, a {
+        ul, p {
             font-size: 150%;
             margin-bottom: 0px;
             font-weight: light;
+            background: linear-gradient(to right, azure, skyblue);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; /* Safari, Chrome用 */
+            background-clip: text;
+            color: transparent;
         }
 
+        iframe {
+            margin-top: 2%;
+            margin-bottom: 2%;
+        }
 
         a {
-            margin-right: 1%;
+            margin: 1%;
         }
 
         .btn {
             text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);   
-            background: linear-gradient(45deg, blue, blueviolet);
+            background: linear-gradient(45deg, rgb(41, 41, 236), blueviolet);
             border-style: none;
         }
         .my-4 {
@@ -84,9 +111,8 @@
         const luminescenceElements = document.querySelectorAll('.luminescence');
 
         function handleMouseEnter() {
-            this.style.color = '#b4edff';
             this.style.textShadow = "0 0 20px rgba(255, 255, 255, 0.8)";
-            setGradientText(this, "lightblue", "blue");
+            setGradientText(this, "blue", "green");
         }
 
         function setGradientText(element, startColor, endColor) {
