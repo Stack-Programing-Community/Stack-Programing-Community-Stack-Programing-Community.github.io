@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+    <head>
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        <div class="stack">
+            (<) (h1) (>) concat concat print
+                (掛け算表) print
+            (<) (/h1) (>) concat concat print
+        </div>
+        
+        <div class="stack">
+            (<) (table) (>) concat concat print
+
+                1 10 1 range (i) (
+                    (<) (tr) (>) concat concat print
+                
+                    1 10 1 range (j) (
+                        (<) (td) (>) concat concat print
+
+                        i j mul (string) cast (res) var
+
+                        ((0) res concat) (res)
+                        res len 1 equal if print
+                        
+                        (<) (/td) (>) concat concat print
+                    ) for
+
+                    (<) (/tr) (>) concat concat print
+                ) for
+
+                (<) (/table) (>) concat concat print
+        </div>
+
+        <script src="https://stack-community.github.io/stack.js" type="module"></script>
+    </body>
+</html>
+             
