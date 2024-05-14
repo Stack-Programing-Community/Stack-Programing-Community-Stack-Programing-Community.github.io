@@ -1,6 +1,163 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <title>Stack</title>
+    </head>
+
+    <body>
+        <div class="d-flex justify-content-center m mt-5">
+            
+        </div>
+    </body>
+
+    <div class="jumbotron">
+        <video autoplay muted playsinline>
+            <source src="anime.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+        </video> 
+
+        <hr class="my-4">
+        <div class="d-flex align-items-center col-12 clearfix">
+            <a class="btn btn-primary btn-lg" href="https://github.com/stack-community" role="button">Github</a>
+            <p class="luminescence">Powerful script language with stack-oriented paradigm</p>
+        </div>
+    </div>
+
+    <div class="jumbotron">
+        <h1 class="luminescence">Why Stack ?</h1>
+        <hr class="my-4">
+
+        <p class="luminescence">Stack is used numerous development project. that reasons are bolow 4 point.</p>
+
+        <ul>
+            <li class="luminescence">Efficient execution: stack-base model is recruitmented as execution logic, it can run fast</li>
+            <li class="luminescence">Dynamic types system: powerful meta-programming features helps you to write the code</li>
+            <li class="luminescence">Multi-paradigm language: support many programming paradigm from functionnal to object-oriented</li>
+            <li class="luminescence">Variety distribution: for many use-cases from use shell script to build web server, etc</li>
+        </ul>
+    </div>
+
+    <div class="jumbotron">
+        <h1 class="luminescence">Learn</h1>
+        <hr class="my-4">
+
+        <p class="luminescence">We recommend read official documents to learn Stack. that explains detail of Stack features</p>
+        <p class="luminescence">And, You can try Stack without installation Stack interpreter if use online execution environment (OXE).</p>
+        <p class="luminescence">In the tutorial,  you can learn Stack and run code at the same time.</p>
+        
+        <a class="btn btn-primary btn-lg" href="https://stack-community.github.io/documents" role="button">Read documents</a>
+        <a class="btn btn-primary btn-lg" href="https://stack-community.github.io/oxe" role="button">Go to OXE</a>
+        <a class="btn btn-primary btn-lg" href="https://stack-community.github.io/stack-tutorial" role="button">Try tutorial</a>
+        
+    </div>
+
+    <div class="jumbotron">
+        <h1 class="luminescence">Community</h1>
+        <hr class="my-4">
+
+        <p class="luminescence">Stack is developed by Stack programming community (SPC). We are communicate on below discord server</p>
+
+        <iframe src="https://discord.com/widget?id=1218489177247580230&theme=dark" width="100%" height="300" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+    
+        <p class="luminescence">
+            March 16, 2024: It was hosting the 1st SPC Conference to solidify the direction of the language.
+            <br>See the <a href="/agenda.html">agenda page</a> to know agenda of this conference.
+
+            The conclusion of this conference is in the <a href="/roadmap.html">roadmap page</a>.<br>
+
+            You can see below youtube to know all of conference.
+        </p>
+
+        <iframe width="100%" height="500" src="https://www.youtube.com/embed/rTQBF57VRJM?si=Zo4oZDKQl1Aan9lf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+        
+    <style>
+        .jumbotron {
+            background-color: black;
+            color:azure;
+            padding: 2%;
+        }
+        
+        ul, p {
+            font-size: 150%;
+            margin-bottom: 0px;
+            font-weight: light;
+            background: linear-gradient(to right, azure, skyblue);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; /* Safari, Chrome用 */
+            background-clip: text;
+            color: transparent;
+        }
+
+        iframe {
+            margin-top: 2%;
+            margin-bottom: 2%;
+        }
+
+        .btn {
+            margin: 1%;
+            margin-right: 2%;
+        }
+
+        .btn {
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);   
+            background: linear-gradient(45deg, rgb(41, 41, 236), blueviolet);
+            border-style: none;
+        }
+        .my-4 {
+            background-color: azure;
+        }
+        
+        body {
+            margin-top: -3%;
+            padding: 1%;
+        }
+        
+        #logo {
+            width: 50%;
+        }
+    </style>
+
     <script>
-        window.location = "/stack-" + navigator.language.substring(0, 2);
+        const luminescenceElements = document.querySelectorAll('.luminescence');
+
+        function handleMouseEnter() {
+            this.style.textShadow = "0 0 20px rgba(255, 255, 255, 0.8)";
+            setGradientText(this, "blue", "green");
+        }
+
+        function setGradientText(element, startColor, endColor) {
+            element.style.background = "linear-gradient(45deg, " + startColor + ", " + endColor + ")";
+            element.style.webkitBackgroundClip = "text"; 
+            element.style.webkitTextFillColor = "transparent"; 
+        }
+
+        function sleep(ms) {
+           const start = new Date().getTime();
+           while (new Date().getTime() - start < ms);
+        }
+
+        function delGradientText(element) {
+            element.style.background = "";
+            element.style.webkitBackgroundClip = ""; 
+            element.style.webkitTextFillColor = "";
+        }
+
+        function handleMouseLeave() {
+            this.style.color = '';
+            this.style.textShadow = '';
+            delGradientText(this);
+        }
+
+        luminescenceElements.forEach(element => {
+            element.addEventListener('mouseenter', handleMouseEnter);
+            element.addEventListener('mouseleave', handleMouseLeave);
+        });
     </script>
 </html>
