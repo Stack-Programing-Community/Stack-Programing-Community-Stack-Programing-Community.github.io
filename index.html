@@ -1,231 +1,199 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stack</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 600;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+        }
+
+        .card {
+            margin-bottom: 1vh;
+        }
+
+        .card-header {
+            background-color: transparent;
+        }
+
+        .section-title {
+            margin-bottom: 40px;
+        }
+
+        .col-lg-4 {
+            font-size: 2.7vh
+        }
+
+        .btn-primary {
+            background-color: #17288B;
+            border-color: #17288B;
+        }
+
+        .bg-primary {
+            background-color: #17288B  !important;
+        }
+
+        footer {
+            background-color: #17288B;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="d-flex justify-content-center m mt-5">
-
-    </div>
-</body>
-
-<div class="jumbotron">
-    <video autoplay muted playsinline>
-        <source src="anime.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-
-    <hr class="my-4">
-    <div class="d-flex align-items-center col-12 clearfix">
-        <a class="btn btn-primary btn-lg" href="https://github.com/stack-community" role="button">Github</a>
-        <p class="luminescence">Powerful script language with stack-oriented paradigm</p>
-    </div>
-</div>
-
-<div class="jumbotron">
-    <h1 class="luminescence">Why Stack ?</h1>
-    <hr class="my-4">
-
-    <p class="luminescence">Stack is used numerous development project. that reasons are below 4 points.</p>
-
-    <ul>
-        <li class="luminescence">Efficient execution: stack-base model is recruited as execution logic, it can run
-            fast</li>
-        <li class="luminescence">Dynamic types system: powerful meta-programming features helps you to write the code
-        </li>
-        <li class="luminescence">Multi-paradigm language: support many programming paradigm from functional to
-            object-oriented</li>
-        <li class="luminescence">Variety distribution: for many use-cases from use shell script to build web server, etc
-        </li>
-    </ul>
-</div>
-
-<div class="jumbotron">
-    <h1 class="luminescence">Images</h1>
-    <hr class="my-4">
-
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="image1.png" class="d-block" alt="First slide">
-            </div>
-            <!-- <div class="carousel-item">
-                <img src="image2.jpg" class="d-block" alt="Second slide">
-            </div>
-            <div class="carousel-item">
-                <img src="image3.jpg" class="d-block" alt="Third slide">
-            </div> -->
+   <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/documents">Documents</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/stack-tutorial">Tutorial</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/stack-community">Github</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://qiita.com/organizations/stack-community">Qiita</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://disboard.org/ja/server/1218489177247580230">Discord</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://stack-community.connpass.com/">Connpass</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.youtube.com/@stack-community">YouTube</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="mailto:stack-community@proton.me">E-mail</a>
+                </li>
+            </ul>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
-</div>
+    </nav>
 
-<div class="jumbotron">
-    <h1 class="luminescence">Learn</h1>
-    <hr class="my-4">
 
-    <p class="luminescence">We recommend read official documents to learn Stack. that explains detail of Stack features
-    </p>
-    <p class="luminescence">And, You can try Stack without installation Stack interpreter if use online execution
-        environment (OXE).</p>
-    <p class="luminescence">In the tutorial, you can learn Stack and run code at the same time.</p>
+    <!-- Header -->
+    <header class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4 text-center">Stack</h1>
+            <p class="lead">Powerful script language with stack-oriented approach</p>
+        </div>
+    </header>
 
-    <a class="btn btn-primary btn-lg" href="https://stack-community.github.io/documents" role="button">Read
-        documents</a>
-    <a class="btn btn-primary btn-lg" href="https://stack-community.github.io/oxe" role="button">Go to OXE</a>
-    <a class="btn btn-primary btn-lg" href="https://stack-community.github.io/stack-tutorial" role="button">Try
-        tutorial</a>
+    <!-- Features Section -->
+    <section id="features" class="bg-light py-5">
+        <div class="container">     
+            <div class="row">
+                <div class="col-lg-3">
+                    <h2 class="h5">Efficient execution</h2>
+                    <p>stack-base model is recruited as execution logic, it can run fast</p>
+                </div>
+            
+                <div class="col-lg-3">
+                    <h2 class="h5">Dynamic types system</h2>
+                    <p>powerful meta-programming features helps you to write the code</p>
+                </div>
+                
+                <div class="col-lg-3">
+                    <h2 class="h5">Multi-paradigm language</h2>
+                    <p>support many programming paradigm from functional to object-oriented</p>
+                </div>
+            
+                <div class="col-lg-3">
+                    <h2 class="h5">Variety distribution</h2>
+                    <p>for many use-cases from use shell script to build web server, etc</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-</div>
+    <!-- Image Section -->
+    <section id="features" class="py-5">
+        <div class="container text-center">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="image1.png" class="d-block" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="image2.png" class="d-block" alt="Second slide">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </section>
 
-<div class="jumbotron">
-    <h1 class="luminescence">Community</h1>
-    <hr class="my-4">
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="h5 text-center">Contact</h2>
+            <p class="text-center">If you have any questions or ideas, feel free to ask us!</p>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <form class="text-center">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="title" name="title" placeholder="Title">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" type="text" id="body" name="body" rows="5"
+                                placeholder="Body"></textarea>
+                        </div>
+                        <button onclick="submitIssue()" class="btn btn-primary">OK</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <p class="luminescence">Stack is developed by Stack programming community (SPC). We are communicate on below discord
-        server</p>
+    <!-- Footer -->
+    <footer class="bg-primary text-white text-center py-3">
+        <div class="container">
+            <p class="mb-0">&copy; 2024 梶塚太智. All Rights Reserved.</p>
+        </div>
+    </footer>
 
-    <iframe src="https://discord.com/widget?id=1218489177247580230&theme=dark" width="100%" height="300"
-        allowtransparency="true" frameborder="0"
-        sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <p class="luminescence">
-        March 16, 2024: It was hosting the 1st SPC Conference to solidify the direction of the language.
-        <br>See the <a href="/agenda.html">agenda page</a> to know agenda of this conference.
+    <script>
+        function submitIssue() {
+            const title = document.getElementById("title").value;
+            const body = document.getElementById("body").value;
+            window.open(`https://github.com/orgs/stack-community/discussions/new?category=general&title=${title}&body=${body}`)
+        }
 
-        The conclusion of this conference is in the <a href="/roadmap.html">roadmap page</a>.<br>
-
-        You can see below youtube to know all of conference.
-    </p>
-
-    <iframe width="100%" height="500" src="https://www.youtube.com/embed/rTQBF57VRJM?si=Zo4oZDKQl1Aan9lf"
-        title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    
-    <p class="luminescence">
-        The second one was hosting on May 25, 2024. It's hackathon style at Discord server.<br> 
-        Unluckily, There weren't any record. The event link is <a href="https://stack-community.connpass.com/event/318292/">here</a>.
-    </p>
-
-</div>
-
-<style>
-    .jumbotron {
-        background-color: black;
-        color: azure;
-        padding: 2%;
-    }
-
-    ul,
-    p {
-        font-size: 150%;
-        margin-bottom: 0px;
-        font-weight: light;
-        background: linear-gradient(to right, azure, skyblue);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        color: transparent;
-    }
-
-    iframe {
-        margin-top: 2%;
-        margin-bottom: 2%;
-    }
-
-    .btn {
-        margin: 1%;
-        margin-right: 2%;
-    }
-
-    .btn {
-        text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
-        background: linear-gradient(45deg, rgb(41, 41, 236), blueviolet);
-        border-style: none;
-    }
-
-    .my-4 {
-        background-color: azure;
-    }
-
-    body {
-        margin-top: -3%;
-        padding: 1%;
-    }
-
-    img {
-        height: 100vh;
-        margin-left: 10%;
-        margin-bottom: 5%;
-    }
-
-    #logo {
-        width: 50%;
-    }
-</style>
-
-<script>
-    const luminescenceElements = document.querySelectorAll('.luminescence');
-
-    function handleMouseEnter() {
-        this.style.textShadow = "0 0 20px rgba(255, 255, 255, 0.8)";
-        setGradientText(this, "white", "lightyellow");
-    }
-
-    function setGradientText(element, startColor, endColor) {
-        element.style.background = "linear-gradient(45deg, " + startColor + ", " + endColor + ")";
-        element.style.webkitBackgroundClip = "text";
-        element.style.webkitTextFillColor = "transparent";
-    }
-
-    function sleep(ms) {
-        const start = new Date().getTime();
-        while (new Date().getTime() - start < ms);
-    }
-
-    function delGradientText(element) {
-        element.style.background = "";
-        element.style.webkitBackgroundClip = "";
-        element.style.webkitTextFillColor = "";
-    }
-
-    function handleMouseLeave() {
-        this.style.color = '';
-        this.style.textShadow = '';
-        delGradientText(this);
-    }
-
-    luminescenceElements.forEach(element => {
-        element.addEventListener('mouseenter', handleMouseEnter);
-        element.addEventListener('mouseleave', handleMouseLeave);
-    });
-
-    $(document).ready(function () {
-        $('#carouselExampleIndicators').carousel({
-            interval: 3000 
+        $(document).ready(function () {
+            $('#carouselExampleIndicators').carousel({
+                interval: 3000 
+            });
         });
-    });
-</script>
+    </script>
+
+</body>
 
 </html>
