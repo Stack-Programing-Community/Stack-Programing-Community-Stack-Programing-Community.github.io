@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+    <head>
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        
+        <button id="btn">何が起きるかな？</button>
+        <div id="msg"></div>
+        
+        <div class="stack">
+            (
+                (msg) get-element-by-id (msg) var
+                (p) create-element (text) var
+                (Stackは素晴らしい!) text set-inner-html
+                text msg append-child
+            ) (click) 
+            (btn) get-element-by-id add-event-listener
+        </div>
+        
+        <script src="https://stack-community.github.io/stack.js" type="module"></script>
+    </body>
+</html>
+             
