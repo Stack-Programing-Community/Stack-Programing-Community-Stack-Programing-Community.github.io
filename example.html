@@ -3,21 +3,29 @@
 
     <head>
         <meta charset="UTF-8">
+        <title>Stack.js Example</title>
     </head>
 
     <body>
         
-        <button id="btn">何が起きるかな？</button>
-        <div id="msg"></div>
+        <button id="add">追加</button>
+        <button id="del">削除</button>
+        <div id="area"></div>
         
         <div class="stack">
             (
-                (msg) get-element-by-id (msg) var
-                (p) create-element (text) var
-                (Stackは素晴らしい!) text set-inner-html
-                text msg append-child
+                (area) get-element-by-id (area) var
+                (p) create-element (msg) var (msg) msg set-id
+                (Stackは素晴らしい!) msg set-inner-html
+                msg area append-child
             ) (click) 
-            (btn) get-element-by-id add-event-listener
+            (add) get-element-by-id add-event-listener
+        
+            (
+                (area) get-element-by-id (area) var
+                (msg) get-element-by-id area remove-child
+            ) (click) 
+            (del) get-element-by-id add-event-listener
         </div>
         
         <script src="https://stack-community.github.io/stack.js" type="module"></script>
