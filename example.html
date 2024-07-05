@@ -14,29 +14,29 @@
         
         <div class="stack">
             (
-                    (area) get-element-by-id (area) var
-                    (button) create-element (msg) var
-                    
-                    (msg) msg set-id
-                    (Stackは素晴らしい! ) msg set-inner-html
+                (area) get-element-by-id (area) var
+                (button) create-element (msg) var
+                
+                (msg) msg set-id
+                (Stackは素晴らしい! ) msg set-inner-html
 
-                    (
-                        (梶塚太智は天才だ! ) 
-                        active-element set-inner-html
-                    ) 
-                    (click) msg add-event-listener 
-
-                    msg area append-child
-                )
-                (click) (add) get-element-by-id 
-                add-event-listener
-            
                 (
-                    (area) get-element-by-id (area) var
-                    (msg) get-element-by-id area remove-child
+                    (梶塚太智は天才だ! ) 
+                    active-element set-inner-html
                 ) 
-                (click) (del) get-element-by-id 
-                add-event-listener         
+                (click) msg add-event-listener 
+
+                msg area append-child
+            )
+            (click) (add) get-element-by-id 
+            add-event-listener
+        
+            (
+                (area) get-element-by-id (area) var
+                (msg) get-element-by-id area remove-child
+            ) 
+            (click) (del) get-element-by-id 
+            add-event-listener         
         </div>
         
         <script src="https://stack-community.github.io/stack.js" type="module"></script>
